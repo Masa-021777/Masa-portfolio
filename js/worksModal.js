@@ -43,7 +43,7 @@ const worksData = {
     },
 
     MagnetGame: {
-        title: "じしゃくんの大冒険(現在制作中)",
+        title: "じしゃくんの冒険記(現在制作中)",
         video: "https://www.youtube.com/embed/sH0yAGLQ7rw",
         appeal: [
             "磁石のN極・S極を活かしたステージギミックの設計を担当しました。",
