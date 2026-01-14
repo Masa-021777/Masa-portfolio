@@ -1,0 +1,166 @@
+
+        :root {
+            --accent: #2563eb;
+            /* アクセントカラー（1色だけ） */
+            --bg: #f4f6f8;
+            --text-main: #333;
+        }
+
+        /* ===== 全体 ===== */
+        body {
+            background: var(--bg);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: var(--text-main);
+            margin: 0;
+            padding: 0;
+        }
+
+        p,
+        li {
+            line-height: 1.7;
+            font-size: 1rem;
+        }
+
+        /* ===== ヒーロー ===== */
+        .hero {
+            text-align: center;
+            padding: 70px 20px;
+            background: linear-gradient(135deg, #4f8cff, #6aa9ff);
+            color: #fff;
+        }
+
+        .hero h1 {
+            font-size: 2.6rem;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        /* ===== セクションタイトル ===== */
+        .section-title {
+            margin: 70px 0 35px;
+            text-align: center;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #222;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: "";
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: var(--accent);
+            margin: 12px auto 0;
+            border-radius: 2px;
+        }
+
+        /* ===== カード ===== */
+        .card {
+            background: #fff;
+            border-radius: 14px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+            padding: 24px;
+            margin-bottom: 30px;
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 14px 30px rgba(0, 0, 0, 0.12);
+        }
+
+        /* ===== プロフィール写真 ===== */
+        .placeholder-photo {
+            width: 180px;
+            height: 180px;
+            background-color: #ddd;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+        }
+
+        /* ===== 作品画像 ===== */
+        .card-img-top {
+            height: 180px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        /* ===== スキルタグ（使うなら） ===== */
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 10px;
+        }
+
+        .skill-tags span {
+            background: #eaf0ff;
+            color: var(--accent);
+            font-size: 0.85rem;
+            padding: 4px 10px;
+            border-radius: 999px;
+            font-weight: 600;
+        }
+
+        /* ===== リンク・ボタン ===== */
+        a {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* ===== レスポンシブ ===== */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.1rem;
+            }
+
+            .section-title {
+                font-size: 1.5rem;
+            }
+        }
+
+
+
+
+        .profile-table th {
+            width: 120px;
+            color: #555;
+            font-weight: 600;
+        }
+
+        .profile-table td {
+            color: #333;
+        }
+
+        /* 中見出し */
+        .content-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            border-left: 5px solid var(--accent);
+            padding-left: 10px;
+            margin-bottom: 12px;
+        }
+
+        /* スキル・資格リスト */
+        .skill-list,
+        .qualification-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .skill-list li,
+        .qualification-list li {
+            padding: 6px 0;
+            border-bottom: 1px dashed #ddd;
+        }
