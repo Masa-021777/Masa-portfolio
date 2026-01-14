@@ -1,7 +1,7 @@
 const worksData = {
     puligfish: {
         title: "PuligFish",
-        video: "video/puligfish.mp4",
+        video: "",
         appeal: [
             "シンプルな操作で直感的に楽しめる「引き寄せアクション」を軸に設計しました。",
             "ボス戦ではHPに応じて部位が段階的に破壊され、進行状況が視覚的に分かるようにしています。",
@@ -20,7 +20,7 @@ const worksData = {
 
     magicdefense: {
         title: "MagicDefense",
-        video: "video/magicdefense.mp4",
+        video: "",
         appeal: [
             "配置型ディフェンスゲームにおける敵進行・攻撃判定・ウェーブ管理などのロジックを実装しました。",
             "複数オブジェクトを扱うため、管理クラスを用いてUI更新とゲーム進行が同期するように設計しました。"
@@ -34,14 +34,14 @@ const worksData = {
             period: "2ヶ月"
         }
     },
+
     MagnetGame: {
         title: "じしゃくんの大冒険(現在制作中)",
-        video: "video/magicdefense.mp4",
+        video: "",
         appeal: [
             "磁石のN極・S極を活かしたステージギミックの設計を担当しました。",
             "プレイヤーの進行を意識したレベル設計・動線計画を行いました。",
             "チュートリアルの流れや操作導線を考慮してステージ構成を提案しました。"
-
         ],
         role: "ゲームロジック、レベルデザイン、ギミック実装",
         info: {
@@ -54,6 +54,7 @@ const worksData = {
     }
 };
 
+// モーダル本体
 const modalBody = document.getElementById("workModalBody");
 
 document.querySelectorAll("[data-work]").forEach(button => {
@@ -67,7 +68,13 @@ document.querySelectorAll("[data-work]").forEach(button => {
 
                     <div class="col-md-7">
                         <div class="ratio ratio-16x9 mb-3">
-                            <video src="${work.video}" controls></video>
+                            ${
+                                work.video
+                                ? `<video src="${work.video}" controls></video>`
+                                : `<div class="bg-dark text-white d-flex align-items-center justify-content-center" style="height:100%">
+                                       動画準備中
+                                   </div>`
+                            }
                         </div>
                     </div>
 
